@@ -29,16 +29,16 @@ my_pokemon = Pokemon()
 
 # Using attributes and methods (functions within a class) on my object
 # print(my_pokemon.name)
-# print(my_pokemon.call())
+print(my_pokemon.call())
 # print(my_pokemon.data)
-# my_pokemon.get_info()
+my_pokemon.get_info()
 # print(my_pokemon.name)
 # print(my_pokemon.type)
-# print(my_pokemon.abilities)
+print(my_pokemon.abilities)
 
 # Creating a dictionary out of multiple Pokemon.
 
-pokemon_list = ['charizard','mewtwo','pikachu','jigglypuff','squirtle','ivysaur','lucario','evee','raichu','pichu']
+pokemon_list = ['charizard','mewtwo','pikachu','jigglypuff','squirtle','ivysaur','lucario','raichu','pichu']
 
 def get_attributes(input_list):
 
@@ -49,7 +49,7 @@ def get_attributes(input_list):
         pokemon.name = i
         pokemon.call()
         pokemon.get_info()
-        output[pokemon.name] = pokemon.type
+        output[pokemon.name] = pokemon.abilities
 
     return output
 
