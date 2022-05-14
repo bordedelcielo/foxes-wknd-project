@@ -27,11 +27,30 @@ class Pokemon():
 # This is creating an object using a class
 my_pokemon = Pokemon()
 
-# This is just me using attributes and methods (functions within a class) on my object
-print(my_pokemon.name)
-print(my_pokemon.call())
-print(my_pokemon.data)
-my_pokemon.get_info()
-print(my_pokemon.name)
-print(my_pokemon.type)
-print(my_pokemon.abilities)
+# Using attributes and methods (functions within a class) on my object
+# print(my_pokemon.name)
+# print(my_pokemon.call())
+# print(my_pokemon.data)
+# my_pokemon.get_info()
+# print(my_pokemon.name)
+# print(my_pokemon.type)
+# print(my_pokemon.abilities)
+
+# Creating a dictionary out of multiple Pokemon.
+
+pokemon_list = ['charizard','mewtwo','pikachu','jigglypuff','squirtle','ivysaur','lucario','evee','raichu','pichu']
+
+def get_attributes(input_list):
+
+    output = {}
+
+    for i in input_list:
+        pokemon = Pokemon()
+        pokemon.name = i
+        pokemon.call()
+        pokemon.get_info()
+        output[pokemon.name] = pokemon.type
+
+    return output
+
+print(get_attributes(pokemon_list))
